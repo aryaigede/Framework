@@ -11,8 +11,18 @@ if (!isset($_SESSION["username"])) {
 
 
 // Query untuk mengambil data user
+// Query untuk mengambil data user
 $sql = "SELECT * FROM user ORDER BY nama";
 $result = $conn->query($sql);
+
+// Query untuk mengambil data user beserta role
+$sqlRoleUser = "SELECT u.iduser, u.nama, GROUP_CONCAT(CONCAT(r.nama_role, ' (', IF(ru.status=1,'Aktif','Non-Aktif'), ')') SEPARATOR '<br>') AS roles
+FROM user u
+LEFT JOIN role_user ru ON u.iduser = ru.iduser
+LEFT JOIN role r ON ru.idrole = r.idrole
+GROUP BY u.iduser, u.nama
+ORDER BY u.nama";
+$resultRoleUser = $conn->query($sqlRoleUser);
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,6 +77,29 @@ $result = $conn->query($sql);
         </tbody>
     </table>
 
+    <h2>Manajemen Role User</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f8f9fa;">
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Role</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = $resultRoleUser->fetch_assoc()): ?>
+                <tr>
+                    <td><?php echo $row['iduser']; ?></td>
+                    <td><?php echo $row['nama']; ?></td>
+                    <td><?php echo $row['roles'] ? $row['roles'] : '-'; ?></td>
+                    <td>
+                        <a href="role/tambah-role.php?iduser=<?php echo $row['iduser']; ?>">Tambah Role</a>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </tbody>
+    </table>
 </body>
 
 </html>
