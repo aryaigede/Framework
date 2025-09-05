@@ -243,10 +243,10 @@
         <div class="news-container">
             <!-- Card 1 -->
             <div class="news-card">
-                <img src="https://i.pinimg.com/736x/35/c5/87/35c58704d8812a9cd32e2ce30121ed6e.jpg" alt="Seminar">
+                <img src="https://media.istockphoto.com/id/1213727367/id/foto/sekelompok-sapi-bersama-sama-berkumpul-di-ladang-bahagia-dan-gembira-dan-langit-cerah-berawan.jpg?s=612x612&w=0&k=20&c=eHcOAmzaLh1ySoC6wNZ5-ddeOJRGjkCLg3SImzIOZgE=" alt="Seminar">
                 <div class="news-content">
                     <h3>Seminar dan Workshop Update Haematology</h3>
-                    <small>2 July 2023</small>
+                    <small>2 November 2023</small>
                     <p>RSHP Universitas Airlangga akan mengadakan kegiatan seminar dan workshop tentang update penyakit
                         Haematology [...]</p>
                 </div>
@@ -256,12 +256,11 @@
 
             <!-- Card 2 -->
             <div class="news-card">
-                <img src="https://i.pinimg.com/736x/35/c5/87/35c58704d8812a9cd32e2ce30121ed6e.jpg" alt="Kunjungan SMAN">
+                <img src="https://thf.bing.com/th/id/OIP.eZWNfa-T67_CEt1TsJ0PJQHaE8?w=262&h=180&c=7&r=0&o=5&cb=thfc1&dpr=1.5&pid=1.7" alt="Kunjungan SMAN">
                 <div class="news-content">
-                    <h3>Kunjungan SMAN 1, 2, 3 dan 4 Bangkalan</h3>
-                    <small>29 March 2023</small>
-                    <p>RSHP Unair menerima kunjungan dari SMAN 1, SMAN 2, SMAN 3 dan SMAN 4 Bangkalan pada hari Senin,27
-                        Maret 2023 [...]</p>
+                    <h3>Tupai Pergi Ke Bulan!</h3>
+                    <small>29 Agustus 2023</small>
+                    <p>lorem ipsum dolor sit accelerometer</p>
                 </div>
                 <a href="https://rshp.unair.ac.id/kunjungan-sman-1-2-3-dan-4-bangkalan-di-rshp-unair/"
                     class="read-more">Read more...</a>
@@ -269,13 +268,12 @@
 
             <!-- Card 3 -->
             <div class="news-card">
-                <img src="https://i.pinimg.com/736x/35/c5/87/35c58704d8812a9cd32e2ce30121ed6e.jpg"
+                <img src="https://thf.bing.com/th/id/OIP.HqgSZdhXKDrjrresvhFQAwHaFu?w=236&h=182&c=7&r=0&o=7&cb=thfc1&dpr=1.5&pid=1.7&rm=3"
                     alt="Kerjasama SMK Tutur">
                 <div class="news-content">
-                    <h3>Penandatanganan Kerjasama SMK Tutur</h3>
-                    <small>28 February 2023</small>
-                    <p>RSHP Universitas Airlangga menjalin kerjasama dengan SMK Tutur dalam bidang pendidikan dan
-                        pelatihan [...]</p>
+                    <h3>Sekor Singa Lepas Dari Kandangnya</h3>
+                    <small>28 januari 2023</small>
+                    <p>Seekor Singa Lepas Dari Kandangnya</p>
                 </div>
                 <a href="https://rshp.unair.ac.id/penandatangani-kerjasama-smk-tutur-dengan-rshp/"
                     class="read-more">Read more...</a>
@@ -298,7 +296,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <p>Copyright Universitas Airlangga.</p>
+                <p>Copyright Universitas Airlangga 2025.</p>
             </div>
             <div class="footer-right">
                 <h4>RUMAH SAKIT HEWAN PENDIDIKAN</h4>
