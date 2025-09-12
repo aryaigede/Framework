@@ -207,13 +207,13 @@
             <img src="https://unair.ac.id/wp-content/uploads/2021/04/Logo-Universitas-Airlangga-UNAIR.png"
                 style="height:50px;">
             <ul>
-                <li><a href="/RSH/Home.php">Home</a></li>
-                <li><a href="/RSH/StrukturOrgan.php">Struktur Organisasi</a></li>
-                <li><a href="/RSH/LayananUmum.php">Layanan Umum</a></li>
-                <li><a href="/RSH/VisiMisi.php">Visi Misi dan Tujuan</a></li>
+                <li><a href="/RSH_OOP/Home.php">Home</a></li>
+                <li><a href="/RSH_OOP/StrukturOrgan.php">Struktur Organisasi</a></li>
+                <li><a href="/RSH_OOP/LayananUmum.php">Layanan Umum</a></li>
+                <li><a href="/RSH_OOP/VisiMisi.php">Visi Misi dan Tujuan</a></li>
             </ul>
         </div>
-        <a href="/RSH/login.php" class="login-button">Login</a>
+        <a href="/RSH_OOP/login.php" class="login-button">Login</a>
     </div>
 
 

@@ -8,30 +8,22 @@ ini_set('display_errors', 1);
 
 $error = '';
 
-//cek koneksi
-if (!$conn) {
-    die('<div class="alert alert-danger">Koneksi database gagal!</div>');
-}
-
 // methode login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-            $query="SELECT
-            `user`.iduser,
-            `user`.nama,
-            `user`.email,
-            `user`.password
-            -- role_user.idrole,
-            -- role.nama_role 
-        FROM
-            `user`
-            -- LEFT JOIN role_user ON role_user.iduser = `user`.iduser
-            -- LEFT JOIN role ON role.idrole = role_user.idrole_user 
-        WHERE user.email =? 
-        -- and role_user.`status`='1'"
-        ;
+    $query = "SELECT
+        u.iduser,
+        u.nama,
+        u.email,
+        u.password,
+        ru.idrole,
+        r.nama_role
+    FROM user u
+    LEFT JOIN role_user ru ON ru.iduser = u.iduser AND ru.status = 1
+    LEFT JOIN role r ON r.idrole = ru.idrole
+    WHERE u.email = ?";
 
       
 
@@ -41,13 +33,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $db->execute();
         $result = $db->get_result();
         if ($row = $result->fetch_assoc()) {
-            // password_verify untuk bcrypt password encription
             if (password_verify($password, $row['password'])) {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $username;
                 $_SESSION['nama'] = $row['nama'];
+                $_SESSION['idrole'] = $row['idrole'];
+                $_SESSION['role'] = $row['nama_role'];
 
-                header('Location: admin.php');
+                // logika login berdasarkan role
+                if ($row['idrole'] == 1) {
+                    header('Location: admin.php'); // admin
+                } elseif ($row['idrole'] == 2) {
+                    header('Location: dokter.php'); // dokter
+                } elseif ($row['idrole'] == 3) {
+                    header('Location: perawat.php'); // perawat
+                } elseif ($row['idrole'] == 4) {
+                    header('Location: resepsionis.php'); // resepsionis
+                } else {
+                    $error = 'Role tidak dikenali!';
+                    session_destroy();
+                }
                 exit();
             } else {
                 $error = 'Password salah!';

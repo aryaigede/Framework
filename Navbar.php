@@ -65,8 +65,9 @@
         </div>
         <div class="navbar-center">
             <ul>
-                <li><a href="/RSH/admin.php">Home</a></li>
-                <li><a href="/RSH/DataMaster.php">Data Master</a></li>
+                <li><a href="/RSH_OOP/admin.php">Home</a></li>
+                <li><a href="/RSH_OOP/DataMaster.php">Data Master</a></li>
+                <li><a href="/RSH_OOP/ManajemenRole.php">Manajemen Role</a></li>
             </ul>
         </div>
         <div class="navbar-right">
